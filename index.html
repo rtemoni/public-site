@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SOOCTF</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+
+<body class="body-bg-main-tab">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/img/soo_ctf_logo_J6.png" alt="Logo" height="40" width="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="main-tab" data-bs-toggle="tab" href="#main">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="rules-tab" data-bs-toggle="tab" href="#rules">Rules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="prizes-tab" data-bs-toggle="tab" href="#prizes">Prizes</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" style="margin-left:auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="ctf-website" href="https://ctf.stateoforigin.online/">Go to CTF site</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="tab-content">
+            <!-- Main tab content -->
+            <div id="main" class="tab-pane show active">
+                <h1 class="heading">SOOCTF</h1>
+                <h1 class="sub-heading">July 7 - July 8, 2023</h1>
+                <table id="countdown" class="countdown">
+                    <tr class="time-row">
+                        <td><span id="days">00</span></td>
+                        <td><span>:</span></td>
+                        <td><span id="hours">00</span></td>
+                        <td><span>:</span></td>
+                        <td><span id="minutes">00</span></td>
+                        <td><span>:</span></td>
+                        <td><span id="seconds">00</span></td>
+                    </tr>
+                    <tr class="subtitle-row">
+                        <td><span>days</span></td>
+                        <td><span></span></td>
+                        <td><span>hours</span></td>
+                        <td><span></span></td>
+                        <td><span>minutes</span></td>
+                        <td><span></span></td>
+                        <td><span>seconds</span></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Rules tab content -->
+            <div id="rules" class="tab-pane body-content">
+                <h1>&#x1F4D5; Rules</h1>
+                <p>If you are found to be in violation of any of the rules, this may lead to deletion of the messages, or receiving a permanent ban from the Discord server, SOOCTF account, and future SOOCTFs.</p>
+                <br>
+
+                <h2>CTF Rules</h2>
+                <ol>
+                  <li>The flag format is described using this regex: <code>^SOOCTF\{.*\}$</code></li>
+                  <li>The following is a sample of a valid flag. Any flag not in a similar format is a false flag. Sample flag: SOOCTF{some_s4mple_flag}</li>
+                  <li>DDoS attacks are strictly prohibited.</li>
+                  <li>You are not allowed to brute-force any challenge on a server, unless specified otherwise.</li>
+                  <li>Collaboration between competing teams is not allowed.</li>
+                  <li>Flag hoarding is not allowed. - You find a flag, submit it right away!</li>
+                  <li>Do not modify or alter the challenges in any way, this includes the flags themselves.</li>
+                  <li>Decisions by admins of the State of Origin CTF regarding all disputes is final</li>
+                  <li>Rules are subject to change at the discretion of the SOOCTF Staff</li>
+                </ol>
+                <br>
+                
+                <h2>Team Formation Rules</h2>
+                <ul>
+                  <li>Team size is up to 5 players.</li>
+                  <li>To remain eligible for prizes:
+                    <ul>
+                      <li>teams are required to be formed with approximately half of the team members being a member of each of the neighbour societies. In other words, the other participating society in the same state as you. For NSW this is UNSW SecSoc and UTS:CSEC, for QLD this is QUTWH and UQ Cyber Squad.</li>
+                      <li>teams are required to have their student emails attached to their SOOCTF account profiles for verification purposes.</li>
+                      <li>team names must be proceeded by the state prefix to show which state your team is fighting for. For NSW, teams are to be prefixed by <code>[NSW]</code>, and <code>[QLD]</code> for QLD.</li>
+                    </ul>
+                  </li>
+                </ul>
+                <br>
+                
+                <h2>General Rules</h2>
+                <ol>
+                  <li>Be respectful to both each other and our staff.</li>
+                  <li>Posting flags in any channel is strictly forbidden.</li>
+                  <li>Please do not share links for pirated software, books or tools.</li>
+                  <li>Keep the content safe for work</li>
+                  <li>Do not post write-ups until the CTF is over.</li>
+                  <li>Do not hack the CTF infrastructure.</li>
+                  <li>Do not advertise other CTFs/Discord servers/events without asking staff.</li>
+                  <li>Regarding all disputes, the decision by staff is final.</li>
+                  <li>IMPORTANT: Have fun!</li>
+                </ol>   
+                <br>             
+            </div>
+            <!-- Prizes tab content -->
+            <div id="prizes" class="tab-pane body-content">
+                <h1>&#127873; Prizes</h1>
+
+                <h2>Overall Winning State</h2>
+                <p>TBA, but will include a trophy which that state can keep for bragging rights</p>
+                <br>
+
+                <h2>Top QLD Team (1st)</h2>
+                <p>Trophy<br>
+                Pentester Lab vouchers</p>
+                <br>
+
+                <h2>Almost Top QLD Team (2nd)</h2>
+                <p>2nd Place Trophy<br>
+                A cool 3D printed SOOCTF logo coin per member</p>
+                <br>
+
+                <h2>Top NSW Team (1st)</h2>
+                <p>Trophy<br>
+                Pentester Lab vouchers</p>
+                <br>
+
+                <h2>Almost Top NSW Team (2nd)</h2>
+                <p>2nd Place Trophy<br>
+                A cool 3D printed SOOCTF logo coin per member</p>
+                <br>
+
+                <h2>Lucky Last</h2>
+                <p>A surprise Prize :P</p>
+                <br>
+
+                <h2>Top scorer in each challenge category</h2>
+                <p>A fancy SOOCTF coaster</p>
+                <br>
+
+                <h2>Meme Prize (Only SOOCTF/CTF Related Memes)</h2>
+                <p>A cool 3D printed SOOCTF logo coin</p>
+                <br>
+
+                <p>To ensure eligibility for prizes:</p>
+                <ul>
+                  <li>You, and all members of your team need to be a member of at least one of the participating societies, before July 8 2023 00:00:00 AEST.
+                    <ul>
+                      <li>A member refers to individuals who are considered a 'Member' or other equivalent term of the participating society as per their constitution.</li>
+                    </ul>
+                  </li>
+                  <li>You must have five or fewer people competing for your team with an even split between the two neighbour universities.
+                    <ul>
+                      <li>If a team is of size 3, then at least 1 must be from a participating neighbour university society.</li>
+                      <li>If a team is of size 5, then at least 2 must be from the participating neighbouring university societies.</li>
+                    </ul>
+                  </li>
+                  <li>To be eligible for the top prize in each state, your team must consist of only Members of the participating societies.</li>
+                  <li>To be eligible for the "Meme Prize", a SOOCTF/CTF related original content meme must be posted in the SOOCTF <code>#memez</code> Discord Channel. No targeting other SOOCTF competitors with memes. Accept that the SOOCTF staff may delete any uploads without notice or reason. Don't be a dickhead. The winner will be determined by the SOOCTF staff.</li>
+                  <li>The Overall Winning State will be decided by totalling the earned points from the Top 2 Teams representing that state. Whichever state has the higher total is determined to be the winner.</li>
+                </ul>
+                
+                <p>Prizes and eligibility are subject to change by State Of Origin CTF staff</p>                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/assets/js/app.js"></script>
+
+</html>
